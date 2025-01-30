@@ -8,8 +8,8 @@ type Props = {
 }
 
 export const Container = styled.View<Props>`
-flex: 1;
 margin-vertical: 10px;
+margin-bottom: 15px;
 
 justify-content: center;
 align-items: center;

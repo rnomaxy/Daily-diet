@@ -20,3 +20,13 @@ color: ${theme.COLORS.GRAY100};
 `};
 margin-top: 40px;
 `;
+
+export const SectionTitle = styled.Text`
+${({ theme }) => css`
+font-family: ${theme.FONT_FAMILY.BOLD};
+font-size: ${theme.FONT_SIZE.XL}px;
+color: ${theme.COLORS.GRAY100};
+`};
+margin-top:15px;
+margin-bottom:10px;
+`;

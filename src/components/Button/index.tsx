@@ -28,7 +28,8 @@ export function Button({ title, type = "PRIMARY", icon: Icon, ...rest }: Props) 
                     <Title type={type}>
                         {title}
                     </Title>
-                </Container>)}
+                </Container>
+            )}
         </Pressable>
     );
 }
