@@ -1,10 +1,16 @@
 import { Container, Subtitle, Title, StatisticButton, StatisticIcon } from "./styles";
 
-export function StatisticsCard() {
+import { HealthStatus } from "src/@types/status";
+
+type Props = {
+    type: HealthStatus;
+}
+
+export function StatisticsCard({ type = "HEALTHY" }: Props) {
     return (
-        <Container>
+        <Container type={type}>
             <StatisticButton>
-                <StatisticIcon />
+                <StatisticIcon type={type} />
             </StatisticButton>
             <Title>90,86%</Title>
             <Subtitle>das refeições dentro da dieta</Subtitle>

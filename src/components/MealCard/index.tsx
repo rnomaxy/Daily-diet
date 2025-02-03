@@ -1,13 +1,21 @@
-import { Container, Content, MealTime, Meal, HealthyStatus, Separator, HealthyStatusSTypeStyleProps } from "./styles";
+import { Container, Content, MealTime, Meal, HealthyStatus, Separator } from "./styles";
 
-export function MealCard() {
+import { HealthStatus } from "src/@types/status";
+
+type Props = {
+    mealTime: string;
+    meal: string;
+    type: HealthStatus;
+}
+
+export function MealCard({ mealTime, meal, type }: Props) {
     return (
         <Container>
             <Content>
-                <MealTime>20:00</MealTime>
+                <MealTime>{mealTime}</MealTime>
                 <Separator>|</Separator>
-                <Meal numberOfLines={1} ellipsizeMode="tail">X-tudo</Meal>
-                <HealthyStatus type="UNHEALTHY"/>
+                <Meal numberOfLines={1} ellipsizeMode="tail">{meal}</Meal>
+                <HealthyStatus type={type} />
             </Content>
         </Container>
     );

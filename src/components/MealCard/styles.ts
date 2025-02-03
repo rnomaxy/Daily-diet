@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components/native";
 
-export type HealthyStatusSTypeStyleProps = "HEALTHY" | "UNHEALTHY";
+import { HealthStatus } from "src/@types/status";
 
 type Props = {
-    type: HealthyStatusSTypeStyleProps;
+    type: HealthStatus;
 }
 
 export const Container = styled.View`
